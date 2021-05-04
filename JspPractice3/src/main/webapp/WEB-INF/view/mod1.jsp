@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="/mod1" method="post">
-		<input type="hidden" name="iboard" value="${param.iboard}">
+		<input type="hidden" name="iboard" value="${data.iboard}">
 		<div>
 			제목 : <input type="text" name="title" value="${data.title}">
 		</div>

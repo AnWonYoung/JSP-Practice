@@ -14,9 +14,9 @@ public class ModServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String iboard = request.getParameter("iboard");
 		int intIboard = Integer.parseInt(iboard);
-		
 		// BoardVO data에 담아주기
 		BoardVO data = BoardDAO.selBoard(intIboard);
+		request.setAttribute("data", data);  // setAttribute 필수!
 		
 		String view = "/WEB-INF/view/mod1.jsp";
 		request.getRequestDispatcher(view).forward(request, response);
